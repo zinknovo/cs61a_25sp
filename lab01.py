@@ -8,6 +8,7 @@ def digit(n, k):
     >>> digit(3579, 10)
     0
     """
+    "*** YOUR CODE HERE ***"
     return n // (10**k) % 10
 
 
@@ -26,6 +27,7 @@ def middle(a, b, c):
     >>> middle(30, 5, 40)
     30
     """
+    "*** YOUR CODE HERE ***"
     return a + b + c - max(a, b, c) - min(a, b, c)
 
 
