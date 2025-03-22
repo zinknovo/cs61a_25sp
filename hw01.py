@@ -13,6 +13,7 @@ def a_plus_abs_b(a, b):
     >>> a_plus_abs_b(-1, -4)
     3
     """
+    "*** YOUR CODE HERE ***"
     if b < 0:
         f = sub
     else:
@@ -44,6 +45,7 @@ def two_of_three(i, j, k):
     >>> two_of_three(5, 5, 5)
     50
     """
+    "*** YOUR CODE HERE ***"
     return i**2 + j**2 + k**2 - max(i, j, k) ** 2
 
 
@@ -68,6 +70,7 @@ def largest_factor(n):
     >>> largest_factor(13) # factor is 1 since 13 is prime
     1
     """
+    "*** YOUR CODE HERE ***"
     for i in range(n - 1, 0, -1):
         if n % i == 0:
             return i
