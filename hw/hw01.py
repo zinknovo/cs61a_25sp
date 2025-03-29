@@ -104,5 +104,5 @@ def hailstone(n):
         else:
             n = 3 * n + 1
         count += 1
-    print(1)
+    print(n)
     return count
