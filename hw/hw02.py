@@ -111,7 +111,9 @@ def make_repeater(f, n):
     390625
     """
     "*** YOUR CODE HERE ***"
-    def repeated(x): #generate a function that doesn't need to be called immediately and takes an argument x otherwise as closure
+    #solution1: nested def
+    #generate a function that doesn't need to be called immediately and takes an argument x otherwise as closure
+    def repeated(x):
         result = x
         count = 0
         while count < n:
@@ -120,6 +122,11 @@ def make_repeater(f, n):
         return result
     return repeated
 
-    #nested lambda works as well but not as readable
-        
-
+    #solution2: nested lambda
+    #works too but not as readable as nested def
+    count = 0
+    result = identity
+    while count < n:
+        result = (lambda g: lambda x: f(g(x)))(result)
+        count += 1
+    return result
