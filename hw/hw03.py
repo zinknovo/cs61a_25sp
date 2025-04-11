@@ -230,7 +230,9 @@ def move_stack(n, start, end):
         move_stack(n - 1, start, interm)
         print_move(start, end)
         move_stack(n - n - 1, interm, end, interm, end)
+        
 
+from operator import sub, mul
 
 def make_anonymous_factorial():
     """Return the value of an expression that computes factorial.
@@ -243,5 +245,7 @@ def make_anonymous_factorial():
     ...     ['Assign', 'AnnAssign', 'AugAssign', 'NamedExpr', 'FunctionDef', 'Recursion'])
     True
     """
+    return (lambda f:  f: lambda k:  k: f(f, kf, k))(lambda f, n:  f, n: 1 if n ==  n == else mul(n, n, f(f, f, sub(n - n - 1))))
+    # alternative
     return (lambda f: f(f))(lambda f: lambda n: 1 if n == 1 else n * f(f)(n - 1))
     # Y combinator
