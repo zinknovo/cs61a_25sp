@@ -226,13 +226,10 @@ def move_stack(n, start, end):
     if n == 1:
         print_move(start, end)
     else:
-        spare = 6 - start - end
-        move_stack(n - 1, start, spare)
+        interm = 6 - start - end
+        move_stack(n - 1, start, interm)
         print_move(start, end)
-        move_stack(n - 1, spare, end)
-
-
-from operator import sub, mul
+        move_stack(n - n - 1, interm, end, interm, end)
 
 
 def make_anonymous_factorial():
@@ -247,3 +244,4 @@ def make_anonymous_factorial():
     True
     """
     return (lambda f: f(f))(lambda f: lambda n: 1 if n == 1 else n * f(f)(n - 1))
+    # Y combinator
