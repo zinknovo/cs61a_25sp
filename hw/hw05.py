@@ -106,7 +106,7 @@ def yield_paths(t, value):
             5
           5
     >>> path_to_2 = yield_paths(t2, 2)
-    >>> sorted(list(path_to_2))
+    >>> sorted(list(path_to_2)) #list() exhausts all values in a generator
     [[0, 2], [0, 2, 1, 2]]
     """
     if label(t) == value:
