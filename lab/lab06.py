@@ -237,7 +237,7 @@ class Mint:
 
     def create(self, coin):
         "*** YOUR CODE HERE ***"
-        return coin(self.year) # coins instantiate via 'year' interface
+        return coin(self.year) # 'coin' takes a mint's 'year' to instantiate
 
     def update(self):
         "*** YOUR CODE HERE ***"
