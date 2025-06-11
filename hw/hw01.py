@@ -18,7 +18,7 @@ def a_plus_abs_b(a, b):
         f = sub
     else:
         f = add
-    return f(a, b)  # f is something that can be called with two arguments
+    return f(a, b)  # f is something that can be called upon two arguments
 
 
 def a_plus_abs_b_syntax_check():
